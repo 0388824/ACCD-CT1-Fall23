@@ -1,9 +1,11 @@
 img {
-    width: 500px;
+    max-width: 100%;
+
 }
 
+
 main,header{
-    width: 1000px;
+    /* width: 1000px; */
     margin-left: auto;
     margin-right: auto;
     
@@ -12,10 +14,56 @@ main,header{
 nav ul{
    list-style: none;
    padding-left: 0;
+   display: flex;
+   flex-direction: column;
+   align-items: stretch;
+   text-align: center;
 
 }
 
 nav ul li{
     display: inline-block;
+    padding: 10px;
+    border: 1px solid black;
+  
+
+}
+
+.em-text{
+    font-style: italic;
+}
+
+
+main a{
+    color: aqua;
+    text-decoration: underline;
+    background-color: rgb(51, 82, 82);
+
+}
+
+@media (min-width: 800px) {
+    nav ul{
+       flex-direction: row;
+       justify-content: space-evenly
+    }
+    nav ul li{
+        border: none;
+        padding: 0;
+    }    
+    .red-text{
+            color: rgb(255, 57, 57)
+        }
+        
+    .green-text{
+            color: rgb(5, 91, 44)
+        }
+    
+
+
+
+@media(min-width: 100px) {
+    .red-text, .green-text{
+        color: blue;
+    }
 
 }

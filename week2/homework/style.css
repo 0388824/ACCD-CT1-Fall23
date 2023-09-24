@@ -1,7 +1,4 @@
-img {
-    max-width: 100%;
 
-}
 
 
 main,header{
@@ -41,16 +38,41 @@ main a{
 
 }
 
+
+
 @media(min-width: 1000px) {
+
+    nav ul{
+        flex-direction: row;
+        justify-content: space-around
+     }
+     nav ul li{
+         border: none;
+         padding: 0;
+     }
+
     .red-text, .green-text{
         color: rgb(255, 72, 185);
+        font-size: 24px;
     }
+
+    img {
+        max-width: 40%;
+        border: 5px solid pink
+    
+    }   
+
+.image-container, main h1 {
+    display: flex;
+    justify-content: center;
+}
 
 }
 @media (min-width: 800px) and (max-width: 999px) {
     nav ul{
        flex-direction: row;
        justify-content: space-evenly
+       
     }
     nav ul li{
         border: none;
@@ -64,12 +86,27 @@ main a{
             color: rgb(5, 91, 44)
         }
     
-
+    img {
+            max-width: 49%;
+        
     }
+
+    .image-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+}
 
 @media(max-width: 799px) {
     .red-text, .green-text{
         color: blue;
     }
 
+    img {
+        max-width: 90%;
+    
+    }
+
 }
+

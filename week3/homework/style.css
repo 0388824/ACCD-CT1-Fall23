@@ -1,0 +1,20 @@
+main h1 {
+    display: flex;
+    justify-content: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.largeimage-container{
+    display: flex;
+    justify-content: center;
+}
+
+.largeimage-container img {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}

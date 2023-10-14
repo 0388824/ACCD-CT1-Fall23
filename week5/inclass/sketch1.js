@@ -1,12 +1,25 @@
+let angle = 0
+
 function setup(){
     let myCanvas = createCanvas(600,600)
-    myCanvas.parent("sketchHolder")
-    background(250,140,180)
-    rotate(PI * 0.25)
-    drawGrid(10)
-    fill(0,0,0)
-    rect(100,100,100,150)
+    myCanvas.parent("sketchHolder1")
+    setInterval(function(){drawGrid(20)},2000)
+}
+
+function draw(){
+    background(255,255,255)
     
+    push()
+    translate(100,100)
+    rotate(angle)
+    drawGrid(60)
+    fill(0,0,0)
+    rect(0,0,100,150)
+    pop()
+
+    circle(150,150,100)
+
+    angle += 0.01;
 }
 
 function drawGrid(numSegments = 10){
@@ -19,3 +32,4 @@ function drawGrid(numSegments = 10){
         line(0, y*interval, width, y*interval)
     }
 }
+

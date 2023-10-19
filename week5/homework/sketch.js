@@ -7,14 +7,6 @@ function setup() {
   myCanvas.parent("sketchHolder");
   colorMode(HSB, TWO_PI, 1, 1);
 
-  for (let i = 0; i < 100; i++) {
-    stars.push({
-      x: random(width),
-      y: random(height),
-      opacity: random(0.1, 0.9)
-    });
-  }
-
   setInterval(function () {showText += 1;}, 1000); 
   
   setInterval(function () {generateStars();}, 2000);
@@ -53,9 +45,10 @@ function draw() {
   if (showText % 2 == 0) {
     fill(0, 0, 1);
     textSize(32);
-    text('ArtCenter', textX, height * 0.5);
+    console.log(textX)
+    text('Spaceman', textX, height * 0.5);
     
-    if (textX >= width - textWidth('ArtCenter')) {
+    if (textX >= width - textWidth('Spaceman')) {
       textDirection = -2; 
     } else if (textX <= 0) {
       textDirection = 2; 

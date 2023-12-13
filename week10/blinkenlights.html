@@ -1,11 +1,12 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Arduino Morse Code for 'Hello'</title>
+    <title>Arduino Morse Code and Video</title>
     <style>
-        body { font-family: monospace; }
-        .code-block { 
+        body {
+            font-family: monospace;
+        }
+        .code-block {
             background-color: #f4f4f4;
             border: 1px solid #ddd;
             padding: 10px;
@@ -24,8 +25,6 @@ void setup() {
 }
 
 void loop() {
-
-
   // H: ....
   dot(); dot(); dot(); dot();
   shortGap();
@@ -44,7 +43,6 @@ void loop() {
 
   // O: ---
   dash(); dash(); dash();
-
 
   longGap();
 }
@@ -70,7 +68,13 @@ void shortGap() {
 void longGap() {
   delay(1500); 
 }
-</pre>
+        </pre>
     </div>
+
+    <h2>Embedded Video</h2>
+    <video width="640" height="480" controls>
+        <source src="IMG_4949.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
 </body>
 </html>

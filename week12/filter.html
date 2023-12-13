@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arduino EQ filter</title>
+    <style>
+        body {
+            font-family: monospace;
+        }
+        .code-block {
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Processing Code for the EQ filter knobs control</h1>
+    <div class="code-block">
+        <pre>
+          import processing.serial.*;
+          import ddf.minim.*;
+          
+          Serial myConnection;
+          float radius = 20;
+          boolean backGrnd = true;
+          color bClr = color(0,0,0);
+          String incomingValue = "";
+          int currButton = 0;
+          int prevButton = 0;
+          float previousVolume = 0;
+          
+          
+          Minim minim;
+          AudioPlayer player;
+          
+          void setup() {
+            size(800, 600);
+          
+            myConnection = new Serial(this, "/dev/cu.usbserial-01AB71B5", 9600);
+            myConnection.bufferUntil('\n');
+          
+            
+            minim = new Minim(this);
+            player = minim.loadFile("/Users/lilxian/Downloads/I Want You To Know.mp3"); // Replace with your audio file path
+            player.play();
+          }
+          
+          void draw(){
+            if (currButton > prevButton){
+              backGrnd = true;
+            }
+            else if (currButton < prevButton){
+              backGrnd = false;
+            }
+            
+            if(backGrnd){
+              background(bClr);
+            }
+            else {
+              background(255);
+            }
+            fill(255,0,0);
+            circle(width*0.5, height*0.5, radius);
+            
+            prevButton = currButton;
+          }
+          
+          void serialEvent(Serial conn){
+            incomingValue = conn.readString();
+            String[] values = split(trim(incomingValue), ',');
+            printArray(values);
+            if(values.length == 2) {
+              float knobValue = map(float(values[0]), 0, 4095, 0, 100);
+              if(abs(knobValue - previousVolume) > 1) {
+                
+                player.setGain(knobValue - 100);
+                previousVolume = knobValue;
+              }
+              radius = map(float(values[0]), 0, 4095, 0, width);
+              currButton = int(values[1]);
+            }
+          }
+          
+          void stop() {
+          
+            player.close();
+            minim.stop();
+          
+            super.stop();
+          }
+
+        </pre>
+    </div>
+
+    <h2>Embedded Video</h2>
+    <video width="640" height="480" controls>
+        <source src="IMG_4954.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+</body>
+</html>

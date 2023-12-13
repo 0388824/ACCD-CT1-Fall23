@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Arduino Morse Code for 'Hello'</title>
+    <style>
+        body { font-family: monospace; }
+        .code-block { 
+            background-color: #f4f4f4;
+            border: 1px solid #ddd;
+            padding: 10px;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Arduino Morse Code for 'Hello'</h1>
+    <div class="code-block">
+        <pre>
+#define ledPin 21
+
+void setup() {
+  pinMode(ledPin, OUTPUT); 
+}
+
+void loop() {
+
+
+  // H: ....
+  dot(); dot(); dot(); dot();
+  shortGap();
+
+  // E: .
+  dot();
+  shortGap();
+
+  // L: .-..
+  dot(); dash(); dot(); dot();
+  shortGap();
+
+  // L: .-..
+  dot(); dash(); dot(); dot();
+  shortGap();
+
+  // O: ---
+  dash(); dash(); dash();
+
+
+  longGap();
+}
+
+void dot() {
+  digitalWrite(ledPin, HIGH);
+  delay(250); 
+  digitalWrite(ledPin, LOW);
+  delay(250); 
+}
+
+void dash() {
+  digitalWrite(ledPin, HIGH);
+  delay(1000); 
+  digitalWrite(ledPin, LOW);
+  delay(250); 
+}
+
+void shortGap() {
+  delay(750); 
+}
+
+void longGap() {
+  delay(1500); 
+}
+</pre>
+    </div>
+</body>
+</html>

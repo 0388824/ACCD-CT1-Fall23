@@ -1,0 +1,36 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+    min-height: 100vh; /* Ensures minimum height is full viewport height */
+    width: 100%; /* Ensures body takes full width of the viewport */
+    display: block; /* Default display, allows natural flow of content */
+}
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: auto; /* Centers the container horizontally */
+}
+
+h1 {
+    text-align: center;
+}
+
+.frame-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.responsive-frame {
+    width: 100%;
+    max-width: 800px;
+    height: auto;
+    margin: 0 auto; /* Centers the frame horizontally */
+}

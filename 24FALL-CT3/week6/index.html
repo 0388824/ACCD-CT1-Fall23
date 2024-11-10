@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Melting Glacier Simulation Documentation</title>
+    <style>
+        /* Responsive video styling */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: #000;
+        }
+        
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Canvas for dynamic background (if needed) -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <header>
+        <h1>Melting Glacier Simulation Documentation</h1>
+    </header>
+
+    <!-- Section 1: Project Brief -->
+    <section id="project-brief" class="section">
+        <h2>Project Overview</h2>
+        <p>This simulation illustrates the melting of glaciers to raise awareness of climate change and its impact on human life. By moving away from Unity's default look, this project emphasizes a unique, immersive experience that contrasts natural and human-made environments, showing how the melting process threatens societal stability and cultural heritage.</p>
+    </section>
+
+    <!-- Section 2: Visual Representation and Simulation Choices -->
+    <section id="visual-language" class="section">
+        <h2>Visual Representation and Design Choices</h2>
+        <p>The design emphasizes a cold, isolating atmosphere with custom textures and lighting to create a distinct environment. Elements are carefully chosen to represent both the literal and figurative impact of glacier melting. The glacier’s collapse symbolizes environmental degradation, while rising water overtaking structures represents cultural and societal loss.</p>
+    </section>
+
+    <!-- Section 3: Simulation Video -->
+    <section id="simulation-video" class="section">
+        <h2>Melting Simulation Video</h2>
+        
+        <!-- Single Video Embedding with Descriptive Caption -->
+        <div class="video-container">
+            <video controls>
+                <source src="melting_simulation.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <p class="caption">This video captures the full melting process, illustrating the glacier’s transformation and the impact on surrounding structures as water levels rise, symbolizing the environmental consequences of climate change.</p>
+        </div>
+    </section>
+
+    <!-- Section 4: Making Process with Screenshots -->
+    <section id="making-process" class="section">
+        <h2>Making Process and Technical Choices</h2>
+        <p>This project required calibration of the melting effect to balance realism with visual impact. Custom shaders and lighting adjustments were made to create a convincing, immersive experience. Iterations focused on refining the glacier’s behavior and water rising to achieve a compelling transition from stability to collapse.</p>
+        <p><strong>Challenges:</strong> Managing performance and particle effects for realistic melting behavior, along with lighting transitions, were crucial to maintaining visual immersion and impact.</p>
+
+        <!-- Screenshots with Captions -->
+        <div class="image-container">
+            <img src="collapse.png" alt="Glacier Collapse Technique">
+            <p class="caption">Used loop cuts to mimic the glacier collapsing in stages, creating a realistic fragmentation effect as melting progressed.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="melting.png" alt="Vertex Animation for Melting">
+            <p class="caption">Applied the Aniall plugin to animate vertices, creating a gradual melting effect that visually conveyed the degradation of ice.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="shader.png" alt="Water Shader Adjustments">
+            <p class="caption">Edited the water shader to include waves, enhanced with HDR to create a realistic, immersive water surface that reflects the melting scene.</p>
+        </div>
+    </section>
+
+    <!-- Section 5: Reflection and Final Thoughts -->
+    <section id="reflection" class="section">
+        <h2>Reflection and Final Thoughts</h2>
+        <p>This simulation is designed to provoke reflection on the immediate and long-term impacts of glacier melting. By presenting the melting process in stages, the project highlights how environmental changes unfold and affect human life, encouraging viewers to consider the consequences of inaction on climate issues.</p>
+    </section>
+
+    <!-- Link to JavaScript file -->
+    <script src="background.js"></script>
+</body>
+</html>

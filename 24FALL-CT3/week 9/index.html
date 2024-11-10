@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Synthetic Relationships Project</title>
+</head>
+
+<body>
+    <!-- Canvas for dynamic background (if needed) -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <header>
+        <h1>Synthetic Relationships Project Documentation</h1>
+    </header>
+
+    <!-- Section 1: Project Brief and Answers to Questions -->
+    <section id="project-brief" class="section">
+        <h2>Project Brief & Responses</h2>
+        <p><em>Synthetic Relationships</em> explores fundamental communication through two electronic beings, "Creature 1" and "Creature 2," in a predator-prey dynamic. Using sensory data and a network via io.adafruit, they interact and respond to each other’s actions.</p>
+        
+        <div class="answers">
+            <h3>Responses to Brief Questions</h3>
+            <ul>
+                <li><strong>Are both creatures in the same environment?</strong> Yes, both interact within the same environment, activating based on shared light conditions.</li>
+                <li><strong>Do their "worldviews" differ?</strong> Yes, Creature 2 detects light, while Creature 1 detects distance to the bird.</li>
+                <li><strong>Are they stationary or mobile?</strong> Both are stationary, engaging dynamically through sensory and motor actions.</li>
+                <li><strong>How is sensory data processed?</strong> Each creature processes data relevant to its sensory role—light or distance, triggering reactions in the other.</li>
+                <li><strong>How is communication encoded?</strong> Communication is transmitted to io.adafruit for real-time data exchange.</li>
+                <li><strong>Will the transmission be continuous or intermittent?</strong> Transmission is intermittent, creating a dynamic interaction.</li>
+                <li><strong>Is the communication perceptible to outsiders?</strong> Yes, observers can see the bird’s motion and feel Creature 1’s vibration.</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- Section 2: Diagram and Code Screenshots -->
+    <section id="diagram" class="section">
+        <h2>Communication Schema & Code</h2>
+        
+        <!-- Diagram Title -->
+        <h3>Diagram</h3>
+        <div class="image-container">
+            <img src="diagram.png" alt="Communication Schema Diagram">
+        </div>
+
+        <!-- Behavioral Sequence Description -->
+        <h3>Behavioral Sequence</h3>
+        <p>
+            When Creature 2 is active, Creature 1 receives the light data and reacts by starting its vibrator, indicating readiness to "search." Creature 1’s distance sensor begins monitoring the cardboard bird’s position. The sensor value is continuously shared on io.adafruit, enabling Creature 2 to "respond" based on the distance.
+        </p>
+        <p><strong>Predator-Prey Cycle:</strong> If Creature 1 detects the bird within a certain range, Creature 2's motor spins, lowering the bird to simulate hiding. As the distance increases (when Creature 1 no longer detects the bird), Creature 2 raises the cardboard again. This back-and-forth interaction repeats, simulating a chase dynamic reminiscent of predator and prey.</p>
+
+        <!-- Code Screenshots for Creature 1 and Creature 2 -->
+        <h3>Code for Creature 1 and Creature 2</h3>
+        <div class="code-screenshots">
+            <div class="creature-column">
+                <h4>Creature 1</h4>
+                <img src="creature1_code1.png" alt="Creature 1 Code Screenshot 1">
+                <img src="creature1_code2.png" alt="Creature 1 Code Screenshot 2">
+            </div>
+            <div class="creature-column">
+                <h4>Creature 2</h4>
+                <img src="creature2_code1.png" alt="Creature 2 Code Screenshot 1">
+                <img src="creature2_code2.png" alt="Creature 2 Code Screenshot 2">
+                <img src="creature2_code3.png" alt="Creature 2 Code Screenshot 3">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Making Process -->
+    <section id="making-process" class="section">
+        <h2>Making Process</h2>
+        <p><strong>Calibration:</strong> Light and distance thresholds were adjusted for accurate activation.</p>
+        <p><strong>Testing & Refinement:</strong> Sensor and motor timings were iteratively improved to create a smooth interaction.</p>
+        <p><strong>Technical Challenges:</strong> Io.adafruit was fine-tuned to handle latency, enabling responsive interaction.</p>
+
+        <!-- Video Containers for Making Process -->
+        <h3>Making Process Videos</h3>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/TzXWxmXI2VU" title="Making Process Video 1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zeYrj00UFc4" title="Making Process Video 2" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- Section 4: Final Documentation -->
+    <section id="final-documentation" class="section">
+        <h2>Final Documentation</h2>
+        
+        <!-- Additional Image Containers -->
+        <div class="image-container">
+            <img src="final_image1.png" alt="Final Documentation Image 1">
+        </div>
+        
+        <div class="image-container">
+            <img src="final_image2.png" alt="Final Documentation Image 2">
+            <p>Close-up of Creature 2’s motor and bird cutout in the activated state.</p>
+        </div>
+
+        <!-- Video for Final Documentation -->
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-oYb9b5KDrk" title="Final Documentation Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        
+    </section>
+
+    <!-- Link to JavaScript file -->
+    <script src="background.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <title>Digital Materialities</title>
+    <style>
+        /* Center the video containers and set the layout */
+        .video-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px 0;
+            width: 45%; /* Adjust the width of each video container */
+        }
+
+        .video-row {
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        video {
+            width: 100%;
+            max-width: 400px; /* Max width of each video */
+            height: auto;
+        }
+
+    </style>
+</head>
+<body>
+    <!-- Canvas for dynamic background (if needed) -->
+    <canvas id="backgroundCanvas"></canvas>
+
+    <header>
+        <h1>Digital Materialities</h1>
+    </header>
+
+    <!-- First Section: Fake 3D Roads -->
+    <section id="fake-3d-roads" class="section">
+        <h2>Fake 3D Roads</h2>
+        <p>
+            The road is created using a perspective effect, where its width gradually decreases as it moves toward the horizon. This is achieved by adjusting the road's width based on the uv.y coordinate. As the uv.y value changes, the road narrows from a wider base near the bottom of the screen to a smaller width near the top. The road's position is determined by comparing the pixel's uv.x value with the calculated road width.
+        </p>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (10).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (11).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (12).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (13).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (14).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Section: Random Generated Patterns -->
+    <section id="random-generated-patterns" class="section">
+        <h2>Random Generated Patterns</h2>
+        <p>
+            These five visuals are created using a combination of randomness, time-based changes, mathematical shapes, and color blending. Random values add variation, time creates movement, and math functions like sine waves and polar coordinates shape the patterns. This approach allows simple inputs, like positions and angles, to generate complex, ever-changing visuals. Each design – whether it's a swirling vortex, flowing waves, or scattered stars – shares this core method of continuous transformation and dynamic generation.
+        </p>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (1).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (2).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (3).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (4).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture.webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Section: 3D Models -->
+    <section id="3d-models" class="section">
+        <h2>3D Models</h2>
+        <p>
+            These five 3D shapes – a sphere, a cube, a torus, a cylinder, and a cone – are rendered purely through code-driven math. Each form is defined by a signed distance function (SDF) that describes how far any point in space is from its surface. By casting rays pixel by pixel and incrementally "marching" forward until hitting a shape or the ground plane, the fragment shader determines what to draw. Normals are computed on the fly by sampling nearby points, enabling dynamic lighting without stored models.
+        </p>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (5).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (6).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (7).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (8).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+        <div class="video-row">
+            <div class="video-container">
+                <video controls>
+                    <source src="capture (9).webm" type="video/webm">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </section>
+
+    <!-- Link to JavaScript file for dynamic background (if needed) -->
+    <script src="background.js"></script>
+</body>
+</html>
